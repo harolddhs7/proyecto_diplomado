@@ -3,5 +3,5 @@ from hc_sr04 import distancia
 import time
 
 while True:
-    print(str(lluvia())+' mm/h')
-    print(str(distancia())+' cm')
+    fecha = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
+    print(fecha + '\nCantidad de lluvia:' +str(lluvia())+' mm/h\n'+ 'Nivel del rio' + str(distancia())+' cm\n')
