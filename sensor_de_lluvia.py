@@ -13,4 +13,4 @@ def lluvia():
     chan = AnalogIn(ads, ADS.P0)
     return -21.21*chan.voltage+70
     
-lluvia()
+
