@@ -4,8 +4,10 @@ import random
 import RPi.GPIO as GPIO
 from sensor_de_lluvia import lluvia
 from hc_sr04 import distancia
+from clasificador import clasificacion
 
-broker = 'industrial.api.ubidots.com'
+#broker = 'industrial.api.ubidots.com'
+broker = '25.12.30.247'
 port =  1883
 topic = '/v1.6/devices/raspberry'
 client_id = "raspberry"
@@ -34,7 +36,7 @@ def connect_mqtt():
         else:
             print('Fallo al conectar, error: %d', rc)
     client = mqtt.Client(client_id)
-    client.username_pw_set(username, password)
+    #client.username_pw_set(username, password)
     client.on_connect = on_connect
     client.connect(broker, port)
     return client
@@ -43,36 +45,11 @@ def connect_mqtt():
 def publish(client):
     while True:
         time.sleep(1)
-        nivel_1 = distancia()
+        nivel_1 =23 - distancia()
         lluvia_1 = lluvia()
+        ia = clasificacion(nivel_1,lluvia_1)
 
-        if nivel_1 < 10:
-            GPIO.output(5, False)
-            GPIO.output(6, False)
-            time.sleep(10)
-            GPIO.output(5, True)
-            GPIO.output(6, True)
-            time.sleep(1)
-
-        if lluvia_1 >30:
-            GPIO.output(16, False)
-            time.sleep(10)
-            GPIO.output(16, True)
-            time.sleep(1)
-
-        if lluvia_1 < 31 and lluvia_1 > 15:
-            GPIO.output(20, False)
-            time.sleep(10)
-            GPIO.output(20, True)
-            time.sleep(1)
-
-        if lluvia_1 < 16:
-            GPIO.output(21, False)
-            time.sleep(10)
-            GPIO.output(21, True)
-            time.sleep(1) 
-
-        mensaje = "{\"nivel\":"+ str(nivel_1)+", \"lluvia\":"+ str(lluvia_1)+"}"
+        mensaje = "{\"nivel\":"+ str(nivel_1)+", \"lluvia\":"+ str(lluvia_1)+", \"ia\":"+ str(clasificacion(nivel_1,lluvia_1)) +"}"
         print(mensaje)
 	
         result = client.publish(topic, mensaje)
@@ -81,7 +58,36 @@ def publish(client):
         if status == 0:
             print('send')
         else:
-            prinf('fail')
+            print('fail')
+
+        if nivel_1 > 15:
+            GPIO.output(5, False)
+            GPIO.output(6, False)
+            #GPIO.output(16, False)
+            time.sleep(1)
+        else:
+            GPIO.output(5, True)
+            GPIO.output(6, True)
+            #GPIO.output(16, True)
+            time.sleep(1)
+
+        if ia == 2:
+            GPIO.output(16, False)
+            time.sleep(5)
+            GPIO.output(16, True)
+            time.sleep(1)
+
+        if ia == 1:
+            GPIO.output(20, False)
+            time.sleep(5)
+            GPIO.output(20, True)
+            time.sleep(1)
+
+        if ia == 0:
+            GPIO.output(21, False)
+            time.sleep(5)
+            GPIO.output(21, True)
+            time.sleep(1) 
 
 def run():
     client = connect_mqtt()

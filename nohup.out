@@ -1,0 +1,145 @@
+Conectado al broker mqtt
+{"nivel":0.7600000000000016, "lluvia":0.14803578722495558}
+send
+{"nivel":1.0899999999999999, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7800000000000011, "lluvia":0.14803578722495558}
+send
+{"nivel":0.6900000000000013, "lluvia":0.14803578722495558}
+send
+{"nivel":0.7100000000000009, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7399999999999984, "lluvia":0.1506871181371423}
+send
+{"nivel":0.7300000000000004, "lluvia":0.1586411108737451}
+send
+{"nivel":0.7300000000000004, "lluvia":0.1506871181371423}
+send
+{"nivel":0.7199999999999989, "lluvia":0.14803578722495558}
+send
+{"nivel":0.7399999999999984, "lluvia":0.1506871181371423}
+send
+{"nivel":0.8099999999999987, "lluvia":0.1506871181371423}
+send
+{"nivel":0.7100000000000009, "lluvia":0.14273312540055372}
+send
+{"nivel":0.7300000000000004, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7300000000000004, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7699999999999996, "lluvia":0.14803578722495558}
+send
+{"nivel":0.8000000000000007, "lluvia":0.14538445631275465}
+send
+{"nivel":0.7800000000000011, "lluvia":0.15333844904934324}
+send
+{"nivel":0.8200000000000003, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7100000000000009, "lluvia":0.14803578722495558}
+send
+{"nivel":0.6700000000000017, "lluvia":0.14803578722495558}
+send
+{"nivel":0.7899999999999991, "lluvia":0.14803578722495558}
+send
+{"nivel":0.75, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7199999999999989, "lluvia":0.14803578722495558}
+send
+{"nivel":0.8299999999999983, "lluvia":0.14273312540055372}
+send
+{"nivel":0.8500000000000014, "lluvia":0.14538445631275465}
+send
+{"nivel":0.7199999999999989, "lluvia":0.14273312540055372}
+send
+{"nivel":0.6799999999999997, "lluvia":0.1506871181371423}
+send
+{"nivel":0.8099999999999987, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7800000000000011, "lluvia":0.14803578722495558}
+send
+{"nivel":0.6999999999999993, "lluvia":0.1506871181371423}
+send
+{"nivel":0.7600000000000016, "lluvia":0.14273312540055372}
+send
+{"nivel":0.6900000000000013, "lluvia":0.14803578722495558}
+send
+{"nivel":0.7699999999999996, "lluvia":0.14803578722495558}
+send
+{"nivel":0.7100000000000009, "lluvia":0.15333844904934324}
+send
+{"nivel":0.75, "lluvia":0.14803578722495558}
+send
+Conectado al broker mqtt
+Conectado al broker mqtt
+Conectado al broker mqtt
+{"nivel":0.7899999999999991, "lluvia":0.15598977996154417}
+Traceback (most recent call last):
+  File "/home/pi/diplomado/funcional.py", line 97, in <module>
+    run()
+  File "/home/pi/diplomado/funcional.py", line 94, in run
+    publish(client)
+  File "/home/pi/diplomado/funcional.py", line 60, in publish
+    prinf('fail')
+NameError: name 'prinf' is not defined
+Conectado al broker mqtt
+{"nivel":0.7199999999999989, "lluvia":0.15333844904934324}
+Traceback (most recent call last):
+  File "/home/pi/diplomado/funcional.py", line 97, in <module>
+    run()
+  File "/home/pi/diplomado/funcional.py", line 94, in run
+    publish(client)
+  File "/home/pi/diplomado/funcional.py", line 60, in publish
+    prinf('fail')
+NameError: name 'prinf' is not defined
+Conectado al broker mqtt
+Conectado al broker mqtt
+{"nivel":0.8299999999999983, "lluvia":0.14803578722495558}
+Traceback (most recent call last):
+  File "/home/pi/diplomado/funcional.py", line 97, in <module>
+    run()
+  File "/home/pi/diplomado/funcional.py", line 94, in run
+    publish(client)
+  File "/home/pi/diplomado/funcional.py", line 60, in publish
+    prinf('fail')
+NameError: name 'prinf' is not defined
+Conectado al broker mqtt
+{"nivel":0.7199999999999989, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7699999999999996, "lluvia":0.15598977996154417}
+send
+{"nivel":0.7699999999999996, "lluvia":0.14273312540055372}
+send
+Conectado al broker mqtt
+{"nivel":0.7800000000000011, "lluvia":0.15333844904934324}
+send
+Conectado al broker mqtt
+Conectado al broker mqtt
+Conectado al broker mqtt
+Conectado al broker mqtt
+{"nivel":0.7399999999999984, "lluvia":0.14803578722495558}
+send
+Conectado al broker mqtt
+Conectado al broker mqtt
+Conectado al broker mqtt
+Conectado al broker mqtt
+{"nivel":0.6799999999999997, "lluvia":0.1506871181371423}
+send
+Conectado al broker mqtt
+Conectado al broker mqtt
+Conectado al broker mqtt
+Conectado al broker mqtt
+{"nivel":0.7899999999999991, "lluvia":0.1506871181371423}
+send
+{"nivel":0.7199999999999989, "lluvia":0.15333844904934324}
+send
+{"nivel":0.7399999999999984, "lluvia":0.15333844904934324}
+send
+{"nivel":0.6999999999999993, "lluvia":0.14803578722495558}
+Traceback (most recent call last):
+  File "/home/pi/diplomado/funcional.py", line 97, in <module>
+    run()
+  File "/home/pi/diplomado/funcional.py", line 94, in run
+    publish(client)
+  File "/home/pi/diplomado/funcional.py", line 60, in publish
+    prinf('fail')
+NameError: name 'prinf' is not defined
